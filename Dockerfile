@@ -10,7 +10,12 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 ENV TOMCAT_MAJOR 6
 ENV TOMCAT_VERSION 6.0.45
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
-ADD tomcat.tar.gz /tmp
-RUN tar -xvf /tmp/tomcat.tar.gz -C /usr/local/ \
-  && ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
+ADD tomcat.tar.gz /usr/local
+#RUN tar -xvf /tmp/tomcat.tar.gz -C /usr/local/ \
+#  && ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
+#  && rm -rf /tmp/tomcat.tar.gz
+ 
+ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
   && rm -rf /tmp/tomcat.tar.gz
+  
+
