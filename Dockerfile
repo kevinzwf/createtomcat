@@ -15,7 +15,7 @@ ADD tomcat.tar.gz /usr/local
 #  && ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
 #  && rm -rf /tmp/tomcat.tar.gz
  
-ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
+RUN ln -s /usr/local/apache-tomcat-$TOMCAT_VERSION $CATALINA_HOME  \
   && rm -rf /tmp/tomcat.tar.gz
   
 
