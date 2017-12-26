@@ -1,4 +1,4 @@
-FROM alaudademo04-alaudademo04.customerindex.alauda.cn:5000/centos:6.9
+FROM 172.18.0.13:5000/centos:6.9
 RUN yum install -y tar
 ### JDK ###
 RUN yum install -y java-1.7.0-openjdk
