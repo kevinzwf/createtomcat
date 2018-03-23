@@ -1,4 +1,4 @@
-FROM 172.18.0.13:5000/centos:6.9
+FROM 10.29.0.5:5000/centos:7.3.1611
 RUN yum install -y tar
 ### JDK ###
 RUN yum install -y java-1.7.0-openjdk
